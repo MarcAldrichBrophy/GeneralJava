@@ -1,0 +1,59 @@
+import java.io.Console;
+
+class Main {
+    public static void main(String[] args) {
+         //Allows us to use readLine
+        Console cnsl;
+        //Declares the cnsl as System console
+        cnsl = System.console();
+
+        //Variables to change string color
+        final String ANSI_GREEN = "\u001B[32m";
+        final String ANSI_RED_BACKGROUND = "\u001B[41m";
+        final String ANSI_RESET = "\u001B[0m";
+
+        System.out.println(ANSI_GREEN + ANSI_RED_BACKGROUND + "CREATE YOUR ALIEN NAME" + ANSI_RESET);
+        System.out.println("");
+        String userInput1 = cnsl.readLine("What is your first name? ");
+        String userInput2 = cnsl.readLine("What is the name of the street you live on? ");
+        String userInput3 = cnsl.readLine("What year were you born? ");
+
+        Handler finalString = new Handler(userInput1, userInput2, userInput3);
+        
+        //prints final name
+        System.out.println(finalString.toString());
+    
+    //First iteration of code
+    /*
+        String finalString = userInput1.substring(0,2) + userInput2.substring(0,3);
+        finalString = finalString.toLowerCase();
+
+        System.out.println(finalString);
+
+    /*
+        String newString1 = "";
+        String newString2 = "";
+
+        for(int i = 0; i < 2; i++)
+        {
+            char e = userInput1.charAt(i);
+            newString1 = newString1 + e;
+        }
+
+        for(int i = 0; i < 3; i ++)
+        {
+            char e = userInput2.charAt(i);
+            newString2 = newString2 + e;
+        }
+        String finalString = "";
+        newString1.toLowerCase();
+        newString2.toLowerCase();
+        finalString = newString1 + newString2;
+        Character.toUpperCase(finalString.charAt(1));
+
+        
+        System.out.println(finalString);
+
+    */
+    }
+}
