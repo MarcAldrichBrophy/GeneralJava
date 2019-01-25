@@ -1,0 +1,41 @@
+import java.util.Random;
+import java.io.Console;
+
+class Main 
+{
+  public static void main(String[] args) 
+  {
+    //Allows us to use readLine
+    Console cnsl;
+    //Declares the cnsl as System console
+    cnsl = System.console();
+    //Random int object
+    Random rand = new Random();
+    //String[] inputArray;
+    //int n = rand.nextInt(50) + 1; //50 is the max and 1 is the min
+
+    String userInput = cnsl.readLine("What word would you like to scramble? ");
+    //Uses the method scramble to return input and print it.
+    System.out.println("Word changed: " + scramble(rand, userInput));
+  }
+
+  //Method to take string and randomly change it.
+  public static String scramble( Random random, String inputString )
+  {
+    // Convert your string into a simple char array:
+    char a[] = inputString.toCharArray();
+
+    // Scramble the letters using the standard Fisher-Yates shuffle, 
+    for(int i = 0; i < a.length; i++)
+    {
+      //Get next integer from array
+        int j = random.nextInt(a.length);
+        //System.out.println(j);
+        // Swap letters
+        //using the classic fisher-yate shuffle algorithm
+        char temp = a[i]; a[i] = a[j];  a[j] = temp;
+    }       
+    //Returns the char array, converted to a string.
+    return new String( a );
+  }
+}
