@@ -1,0 +1,27 @@
+class Handler {
+
+    private String lastString;
+    private String name1;
+    private String stName;
+    private String bYear;
+
+    // brings variables to predeclared private variables
+    public Handler(String firstName, String streetName, String birthYear)
+    {
+        name1 = firstName;
+        stName = streetName;
+        bYear = birthYear;
+    }
+
+    // gets string to be printed out for the full name
+    public String toString()
+    {
+        name1 = name1.substring(0,2);
+        stName = stName.substring(0,3);
+        bYear = bYear.substring(2,4);
+        lastString = "Your final alien name is: " + name1 + stName + " " + bYear;
+        lastString = lastString.toLowerCase();
+        return lastString;
+    }
+
+}
