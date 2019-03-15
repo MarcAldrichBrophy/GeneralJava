@@ -1,3 +1,5 @@
+class ResponseHandler
+{
 //response constructor
     public ResponseHandler(String _response)
     {
