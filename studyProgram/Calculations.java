@@ -1,4 +1,4 @@
-class Calculations
+class Calculations // Class "calculations" is created to manage and store all calculaton equations in one seperate file.
 {
     private String response;
 
