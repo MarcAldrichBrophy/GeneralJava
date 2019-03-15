@@ -1,6 +1,11 @@
-class ResponseHandler
+class ResponseHandler extends stats
+// A class is an entity for methods and variables, which determines how the code will behave. 
+// Code can be executed and connected with other classes.
+// In this class, I extended it to stats, and also stored Response type methods to keep code organized.
 {
 //response constructor
+    private String _response;
+    
     public ResponseHandler(String _response)
     {
       super(0,"");
